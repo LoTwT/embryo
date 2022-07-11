@@ -1,0 +1,12 @@
+{
+  "name": "embryo",
+  "version": "0.0.0",
+  "description": "a bff framework embryo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "LoTwT <709937065@qq.com>",
+  "license": "ISC"
+}
