@@ -6,7 +6,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "NODE_ENV=development nodemon -e ts,ejs --exec ts-node --esm -T ./example/app.ts",
-    "lerna": "npx lerna bootstrap"
+    "lerna": "npx lerna bootstrap",
+    "prettier": "prettier --write ."
   },
   "keywords": [],
   "author": "LoTwT <709937065@qq.com>",
@@ -16,6 +17,7 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.19",
+    "prettier": "^2.7.1",
     "ts-node": "^10.8.2",
     "typescript": "^4.7.4"
   }
