@@ -1,7 +1,9 @@
 import Koa from "koa"
 import path from "path"
-import { deepMerge } from "./utils"
-import { App } from "./types"
+import { deepMerge, getHooks } from "./utils"
+import { App, Hook } from "./types"
+
+const hooks = ["lift"]
 
 type Params = {
   appPath: string
@@ -23,4 +25,16 @@ export default async function Embryo(params: Params) {
   )
 
   app.config = deepMerge(baseConfig.default(app), curConfig.default(app))
+
+  // 获取所有 hooks 逻辑
+  const allHooks: Hook[] = await getHooks(hooks)
+  for (const hook of allHooks) {
+    try {
+      await hook.default(app)
+    } catch (error) {
+      // todo
+    }
+  }
+
+  app.on("error", (error) => {})
 }
