@@ -1,3 +1,3 @@
-import Embryo from "embryo-core/core/index.js"
+import Embryo from "../lib/core"
 
-const app = Embryo()
+const app = Embryo({ appPath: __dirname })
