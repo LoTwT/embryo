@@ -1,12 +1,22 @@
 {
   "name": "embryo",
   "version": "0.0.0",
+  "type": "module",
   "description": "a bff framework embryo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "NODE_ENV=development nodemon -e ts,ejs --exec ts-node --esm -T ./example/app.ts",
+    "lerna": "npx lerna bootstrap"
   },
   "keywords": [],
   "author": "LoTwT <709937065@qq.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "lerna": "^5.1.8"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19",
+    "ts-node": "^10.8.2",
+    "typescript": "^4.7.4"
+  }
 }
