@@ -1,0 +1,15 @@
+{
+  "name": "embryo-core",
+  "version": "0.0.0",
+  "description": "embryo core",
+  "main": "./dist/core/index.js",
+  "scripts": {
+    "build": "rimraf ./dist && npx tsc"
+  },
+  "keywords": [],
+  "author": "LoTwT",
+  "license": "ISC",
+  "devDependencies": {
+    "rimraf": "^3.0.2"
+  }
+}
