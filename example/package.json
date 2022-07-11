@@ -12,5 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "embryo-core": "^0.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.3"
   }
 }
