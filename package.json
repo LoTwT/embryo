@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon -e ts,ejs --exec ts-node -T ./example/app.ts",
-    "lerna": "npx lerna bootstrap",
+    "lerna": "lerna",
+    "bootstrap": "npx lerna bootstrap",
     "prettier": "prettier --write .",
     "prepare": "simple-git-hooks"
   },
