@@ -5,6 +5,7 @@ export default (app: any) => {
       port: 8888,
     },
     // 路由类型 "file" | "koa-router"
-    router: "file",
+    // router: "file",
+    router: "koa-router",
   }
 }

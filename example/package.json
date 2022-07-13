@@ -10,9 +10,11 @@
   "author": "LoTwT",
   "license": "ISC",
   "dependencies": {
+    "@koa/router": "^11.0.1",
     "embryo-core": "^0.0.0"
   },
   "devDependencies": {
+    "@types/koa__router": "^8.0.11",
     "@types/node": "^18.0.3"
   }
 }

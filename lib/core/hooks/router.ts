@@ -1,4 +1,5 @@
 import glob from "glob"
+import compose from "koa-compose"
 import path from "node:path"
 import { App } from "../types"
 
@@ -48,5 +49,26 @@ export default async (app: App) => {
 
       return next()
     })
+  }
+  // koa-router 类型
+  else if (router === "koa-router") {
+    const routerFiles = glob.sync(
+      path
+        .resolve(app.appPath, "./routers", `**/*${app.extName}`)
+        .replace(/\\/g, "/"),
+    )
+
+    const registerRouter = async () => {
+      const routers: any[] = []
+
+      for (let file of routerFiles) {
+        const router = await import(file)
+        routers.push(router.default.routes())
+      }
+
+      return compose(routers)
+    }
+
+    app.use(await registerRouter())
   }
 }
