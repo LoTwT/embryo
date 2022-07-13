@@ -12,6 +12,7 @@
   "devDependencies": {
     "@types/glob": "^7.2.0",
     "@types/koa": "^2.13.4",
+    "@types/koa-static": "^4.0.2",
     "@types/lodash": "^4.14.182",
     "@types/node": "^18.0.3",
     "rimraf": "^3.0.2"
@@ -20,6 +21,7 @@
     "glob": "^8.0.3",
     "koa": "^2.13.4",
     "koa-compose": "^4.1.0",
+    "koa-static": "^5.0.0",
     "lodash": "^4.17.21"
   }
 }
