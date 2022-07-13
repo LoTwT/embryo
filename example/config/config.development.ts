@@ -10,5 +10,11 @@ export default (app: any) => {
 
     // koa-static 中间件配置
     static: {},
+
+    // cors 配置
+    cors: {
+      origin: "http://127.0.0.1:5500",
+      maxAge: 0,
+    },
   }
 }

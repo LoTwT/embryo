@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>cors-test</title>
+  </head>
+
+  <body>
+    <button onclick="getinfo()">请求 user/getinfo 接口</button>
+  </body>
+
+  <script>
+    function getinfo() {
+      fetch("http://localhost:8888/user/getinfo")
+        .then((stream) => stream.text())
+        .then((res) => {
+          console.log(res)
+        })
+    }
+  </script>
+</html>
