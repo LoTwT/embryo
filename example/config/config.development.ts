@@ -16,5 +16,9 @@ export default (app: any) => {
       origin: "http://127.0.0.1:5500",
       maxAge: 0,
     },
+
+    // 自定义中间件
+    // 加载次序，从左到右
+    middlewares: ["two", "one"],
   }
 }

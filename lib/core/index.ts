@@ -4,7 +4,7 @@ import { deepMerge, getHooks } from "./utils"
 import { App, Hook } from "./types"
 
 // cors 需要在 router 左侧
-const hooks = ["cors", "static", "router", "lift"]
+const hooks = ["custom-middlewares", "cors", "static", "router", "lift"]
 
 type Params = {
   appPath: string
