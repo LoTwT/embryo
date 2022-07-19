@@ -5,8 +5,8 @@ export default (app: any) => {
       port: 8888,
     },
     // 路由类型 "file" | "koa-router"
-    // router: "file",
-    router: "koa-router",
+    router: "file",
+    // router: "koa-router",
 
     // koa-static 中间件配置
     static: {},
@@ -20,5 +20,12 @@ export default (app: any) => {
     // 自定义中间件
     // 加载次序，从左到右
     middlewares: ["two", "one"],
+
+    // 登录配置
+    login: {
+      needLogin: true, // 接口是否需要鉴权
+      secret: "my_secret", // JWT 的 secret
+      cookieOption: {},
+    },
   }
 }

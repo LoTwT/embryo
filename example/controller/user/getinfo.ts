@@ -1,6 +1,6 @@
 export default {
   method: "GET",
   handler: async (ctx) => {
-    ctx.body = "user/getInfo"
+    ctx.body = `user/getInfo username:${ctx?.user?.username}`
   },
 }
