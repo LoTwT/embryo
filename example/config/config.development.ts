@@ -25,7 +25,10 @@ export default (app: any) => {
     login: {
       needLogin: true, // 接口是否需要鉴权
       secret: "my_secret", // JWT 的 secret
-      cookieOption: {},
+      cookieOption: {
+        path: "/user/getinfo",
+        domain: "http://127.0.0.1",
+      },
     },
   }
 }
