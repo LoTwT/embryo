@@ -45,7 +45,10 @@ export default async (app: App) => {
 
       // 如果匹配到，就执行对应的 handler
       if (routerMap[key]) await routerMap[key](ctx)
-      else ctx.body = "no this router"
+      // 不使用模板引擎
+      // else ctx.body = "no this router"
+      // 使用模板引擎
+      else await ctx.render("404")
 
       return next()
     })
