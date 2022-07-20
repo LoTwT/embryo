@@ -1,7 +1,7 @@
 export default {
   method: "GET",
   handler: async (ctx) => {
-    ctx.body = `user/getInfo username:${ctx?.user?.username}`
+    ctx.body = `user/getInfo GET username:${ctx?.user?.username}`
     // try {
     //   throw Error("this is an error")
     // } catch (error) {
@@ -9,3 +9,11 @@ export default {
     // }
   },
 }
+
+// export default {
+//   method: "POST",
+//   handler: async (ctx) => {
+//     console.log(ctx.request.body)
+//     ctx.body = `user/getInfo POST`
+//   },
+// }
