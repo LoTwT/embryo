@@ -30,5 +30,10 @@ export default (app: any) => {
         domain: "http://127.0.0.1",
       },
     },
+
+    // koa-views 模板配置
+    view: {
+      extension: "ejs",
+    },
   }
 }
