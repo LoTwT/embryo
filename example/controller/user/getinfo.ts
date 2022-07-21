@@ -1,6 +1,8 @@
 export default {
   method: "GET",
   handler: async (ctx) => {
+    // await ctx.redis.set("embryo:user", "lotwt")
+
     ctx.body = `user/getInfo GET username:${ctx?.user?.username}`
     // try {
     //   throw Error("this is an error")
