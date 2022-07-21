@@ -1,7 +1,15 @@
 export default {
   method: "GET",
   handler: async (ctx) => {
+    // redis
     // await ctx.redis.set("embryo:user", "lotwt")
+
+    // mysql
+    // const sql = `INSERT INTO tbl_users(username,nickname) VALUES('lotwt', 'lo')`
+    // ctx.mysql.query(sql, function (error, results, fields) {
+    //   if (error) throw error
+    //   console.log("results: ", results)
+    // })
 
     ctx.body = `user/getInfo GET username:${ctx?.user?.username}`
     // try {

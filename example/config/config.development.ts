@@ -42,5 +42,13 @@ export default (app: any) => {
       host: "127.0.0.1",
       password: "",
     },
+
+    // MySql 配置
+    mysql: {
+      host: "localhost",
+      user: "root",
+      password: "123456",
+      database: "koadb",
+    },
   }
 }
