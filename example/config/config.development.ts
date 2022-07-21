@@ -1,3 +1,5 @@
+import path from "node:path"
+
 export default (app: any) => {
   return {
     // 开发环境配置
@@ -54,6 +56,11 @@ export default (app: any) => {
     //elasticsearch
     elasticsearch: {
       host: "localhost:9200",
+    },
+
+    // log
+    log: {
+      dir: path.join(__dirname, "../log"),
     },
   }
 }

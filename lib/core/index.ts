@@ -5,6 +5,7 @@ import { App, Hook } from "./types"
 
 // cors 需要在 router 左侧
 const hooks = [
+  "log",
   // "elasticsearch",
   // "mysql",
   // "redis",
@@ -45,9 +46,12 @@ export default async function Embryo(params: Params) {
     try {
       await hook.default(app)
     } catch (error) {
-      // todo
+      ;(process as any).emit("error", error)
     }
   }
 
-  app.on("error", (error) => {})
+  // 兜底错误打印
+  app.on("error", (error) => {
+    ;(process as any).emit("error", error)
+  })
 }

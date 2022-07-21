@@ -23,6 +23,12 @@ export default {
     //   },
     // })
 
+    // error log
+    // ctx.error("error log")
+
+    // application log
+    // ctx.log("application log")
+
     ctx.body = `user/getInfo GET username:${ctx?.user?.username}`
     // try {
     //   throw Error("this is an error")
