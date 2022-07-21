@@ -5,7 +5,7 @@ import { App, Hook } from "./types"
 
 // cors 需要在 router 左侧
 const hooks = [
-  "elasticsearch",
+  // "elasticsearch",
   // "mysql",
   // "redis",
   "bodyparser",
