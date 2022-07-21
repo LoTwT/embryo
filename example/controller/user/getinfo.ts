@@ -11,6 +11,18 @@ export default {
     //   console.log("results: ", results)
     // })
 
+    // elasticsearch
+    // await ctx.elasticsearch.create({
+    //   index: "student",
+    //   type: "_doc",
+    //   id: "1",
+    //   body: {
+    //     name: "lotwt",
+    //     sex: "male",
+    //     age: 29,
+    //   },
+    // })
+
     ctx.body = `user/getInfo GET username:${ctx?.user?.username}`
     // try {
     //   throw Error("this is an error")

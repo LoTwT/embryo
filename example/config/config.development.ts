@@ -50,5 +50,10 @@ export default (app: any) => {
       password: "123456",
       database: "koadb",
     },
+
+    //elasticsearch
+    elasticsearch: {
+      host: "localhost:9200",
+    },
   }
 }
