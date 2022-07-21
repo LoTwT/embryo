@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon -e ts,ejs --exec ts-node -T ./example/app.ts",
+    "test": "rimraf 'test/.temp/*' && mocha --exit -t=10000 'test/**/*.spec.js'",
     "lerna": "lerna",
     "bootstrap": "npx lerna bootstrap",
     "prettier": "prettier --write .",
@@ -17,11 +18,15 @@
     "lerna": "^5.1.8"
   },
   "devDependencies": {
+    "chai": "^4.3.6",
     "cross-env": "^7.0.3",
     "lint-staged": "^13.0.3",
+    "mocha": "^10.0.0",
     "nodemon": "^2.0.19",
     "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
     "simple-git-hooks": "^2.8.0",
+    "supertest": "^6.2.4",
     "ts-node": "^10.8.2",
     "typescript": "^4.7.4"
   },
